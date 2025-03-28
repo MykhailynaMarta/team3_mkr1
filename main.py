@@ -22,7 +22,7 @@ def select_and_filter():
         messagebox.showwarning("Помилка", "Введіть ключове слово.")
         return
     
-    save_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
+    save_path = filedialog.asksaveasfilename(initialfile='filtered', defaultextension=".txt", filetypes=[("Text files", "*.txt")])
     if not save_path:
         messagebox.showwarning("Помилка", "Не обрано місце для збереження.")
         return
