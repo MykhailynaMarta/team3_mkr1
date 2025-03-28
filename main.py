@@ -2,12 +2,12 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 
 def filter_file_by_keyword(input_file, keyword, output_file):
-    with open(input_file, 'r', encoding='utf8bom') as file:
+    with open(input_file, 'r') as file:
         lines = file.readlines()
 
     filtered_lines = [line for line in lines if keyword in line]
 
-    with open(output_file, 'w', encoding='utf8bom') as file:
+    with open(output_file, 'w') as file:
         file.writelines(filtered_lines)
 
 def select_and_filter():
