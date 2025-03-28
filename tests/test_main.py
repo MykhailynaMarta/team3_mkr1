@@ -25,6 +25,3 @@ def test_filter_variants(tmp_path, content, keyword, expected):
     filter_file_by_keyword(str(test_file), keyword, str(output_file))
     
     assert output_file.read_text().strip() == expected
-
-def pytest_configure(config):
-    config.option.htmlpath = "report.html"
